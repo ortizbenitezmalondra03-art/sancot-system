@@ -3,7 +3,7 @@
 //  Todas las llamadas a la API de Python en un solo lugar
 // ─────────────────────────────────────────────────────────
 
-const BASE = 'http://localhost:5000'
+const BASE = 'https://sancot-api.onrender.com'
 
 const post = (url, body) =>
   fetch(`${BASE}${url}`, {
