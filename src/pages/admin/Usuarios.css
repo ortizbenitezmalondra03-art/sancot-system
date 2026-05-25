@@ -1,0 +1,36 @@
+.admin-wrap {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.admin-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.usuarios-badge-rol {
+  font-weight: 400;
+}
+
+.usuarios-acciones-cell {
+  display: flex;
+  gap: 6px;
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}

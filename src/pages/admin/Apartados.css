@@ -1,0 +1,169 @@
+.apartados-productos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.apartados-producto-item {
+  cursor: pointer;
+  font-size: 12px;
+  user-select: none;
+  padding: 0.25rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.apartados-producto-item:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.apartados-producto-item.active {
+  background: #f1f8ff;
+  border-color: #378add;
+}
+
+.apartados-producto-item-erick.active {
+  background: #e8f7f0;
+  border-color: #1d9e75;
+}
+
+.apartados-mensaje-vacio {
+  font-size: 12px;
+}
+
+.apartados-badge-list span {
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.apartados-progress-wrapper {
+  font-size: 11px;
+  margin-top: 2px;
+  color: #aaa;
+}
+
+.apartados-progress-bar-bg {
+  height: 4px;
+  border-radius: 2px;
+  background: #e9ecef;
+  overflow: hidden;
+}
+
+.apartados-progress-bar {
+  height: 100%;
+  transition: width .3s;
+}
+
+.apartados-table-row-cancelado {
+  background: #fff5f5 !important;
+}
+
+.apartados-table-row-por-vencer {
+  background: #fffbf0 !important;
+}
+
+.apartados-alert-small {
+  font-size: 13px;
+}
+
+.apartados-modal-dialog {
+  max-width: 720px;
+  margin: 1.5rem auto;
+}
+
+.apartados-modal-dialog .modal-content {
+  max-height: calc(100vh - 3rem);
+}
+
+.apartados-modal-dialog .modal-body {
+  overflow-y: auto;
+}
+
+.apartados-cantidad-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.apartados-cantidad-btn {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #fff;
+  color: #2c3e50;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apartados-cantidad-btn:hover {
+  background: #f3f6f9;
+}
+
+.apartados-cantidad-value {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.apartados-grupo-label {
+  grid-column: 1 / -1;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 0;
+}
+
+.apartados-grupo-dany {
+  color: #378add;
+}
+
+.apartados-grupo-erick {
+  color: #1d9e75;
+}
+
+.apartados-tallas-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.apartados-talla-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.apartados-talla-btn {
+  min-width: 54px;
+  border: 1px solid #d0d7de;
+  border-radius: 999px;
+  background: #fff;
+  color: #2c3e50;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.apartados-talla-btn.active {
+  background: #eef6ff;
+  border-color: #378add;
+  color: #1558a6;
+}
+
+.apartado-resumen-item + .apartado-resumen-item {
+  margin-top: 8px;
+}
+
+.apartado-talla-tag {
+  color: #6b7280;
+  font-size: 11px;
+}

@@ -1,0 +1,174 @@
+.rec-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: none;
+}
+
+.rec-titulo {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.rec-empty {
+  background: #f8f9fa;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 28px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ── Grupo por fecha ── */
+.rec-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rec-fecha-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 2px;
+}
+
+.rec-fecha-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #888;
+  text-transform: capitalize;
+}
+
+.rec-fecha-total {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* ── Lista de recibos ── */
+.rec-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── Card de recibo ── */
+.rec-card {
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.15s;
+}
+
+.rec-card:hover {
+  border-color: #B5D4F4;
+}
+
+.rec-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rec-hora {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.rec-metodo {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.metodo-efectivo      { background: #E1F5EE; color: #085041; }
+.metodo-tarjeta       { background: #E6F1FB; color: #0C447C; }
+.metodo-transferencia { background: #EEEDFE; color: #3C3489; }
+
+/* ── Productos ── */
+.rec-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.rec-prod-tag {
+  background: #f0f4f8;
+  color: #555;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 0.5px solid #e0e0e0;
+}
+
+/* ── Parte inferior ── */
+.rec-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rec-detalles {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rec-detalle-item {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.rec-card-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rec-total {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1D9E75;
+}
+
+.btn-imprimir {
+  padding: 5px 12px;
+  border: 0.5px solid #ddd;
+  border-radius: 7px;
+  background: transparent;
+  font-size: 12px;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.12s;
+}
+
+.btn-imprimir:hover {
+  background: #E6F1FB;
+  color: #0C447C;
+  border-color: #B5D4F4;
+}
+
+@media (max-width: 640px) {
+  .rec-fecha-header,
+  .rec-card-top,
+  .rec-card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .rec-card-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,139 @@
+.inicio-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: none;
+}
+
+.alerta-warn {
+  background: #faeeda;
+  border: 0.5px solid #fac775;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #633806;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.metric-card {
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #888;
+}
+
+.metric-value {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.metric-value.blue { color: #378add; }
+.metric-value.green { color: #1d9e75; }
+.metric-value.amber { color: #ba7517; }
+
+.metric-sub {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.ultimas-wrap {
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.ultimas-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.sin-ventas {
+  font-size: 13px;
+  color: #aaa;
+  text-align: center;
+  padding: 16px 0;
+  margin: 0;
+}
+
+.ultimas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.venta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+
+.venta-row:last-child {
+  border-bottom: none;
+}
+
+.venta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.venta-productos {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+
+.venta-hora {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.venta-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.venta-total {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d9e75;
+}
+
+.venta-metodo {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 1px 7px;
+  border-radius: 999px;
+}
+
+.metodo-efectivo { background: #e1f5ee; color: #085041; }
+.metodo-tarjeta { background: #e6f1fb; color: #0c447c; }
+.metodo-transferencia { background: #eeedfe; color: #3c3489; }
+
+@media (max-width: 960px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

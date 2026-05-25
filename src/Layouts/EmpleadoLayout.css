@@ -1,0 +1,168 @@
+.empleado-wrap {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  overflow: hidden;
+}
+
+.empleado-sidebar {
+  width: 300px;
+  min-width: 300px;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.empleado-sidebar-brand {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.empleado-sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem 1rem;
+  overflow: hidden;
+}
+
+.empleado-nav-item {
+  padding: 0.95rem 1rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.empleado-nav-item:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.empleado-nav-item.active {
+  background: rgba(255, 255, 255, 0.24);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
+}
+
+.empleado-nav-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.empleado-nav-helper {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.empleado-nav-green.active {
+  border-color: #7de2be;
+}
+
+.empleado-nav-purple.active {
+  border-color: #c7beff;
+}
+
+.empleado-logout-btn {
+  margin: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.empleado-logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.empleado-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+.empleado-topbar {
+  background: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  color: #667eea;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.empleado-content {
+  flex: 1;
+  width: 100%;
+  padding: 2rem 2.25rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .empleado-wrap {
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .empleado-sidebar {
+    width: 100%;
+    min-width: 100%;
+    padding-top: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .empleado-sidebar-brand {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .empleado-sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0 1rem 1rem;
+  }
+
+  .empleado-nav-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .empleado-logout-btn {
+    margin: 1rem;
+  }
+
+  .empleado-topbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .empleado-content {
+    padding: 1.5rem;
+  }
+}

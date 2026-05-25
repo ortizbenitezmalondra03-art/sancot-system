@@ -1,0 +1,208 @@
+.rep-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: none;
+}
+
+.rep-titulo {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+/* ── Métricas ── */
+.rep-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.rep-card {
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 13px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rep-label {
+  font-size: 11px;
+  color: #888;
+}
+
+.rep-value {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.rep-value.green  { color: #1D9E75; }
+.rep-value.blue   { color: #378ADD; }
+.rep-value.morado { color: #7F77DD; }
+.rep-value.amber  { color: #BA7517; }
+
+.rep-sub {
+  font-size: 11px;
+  color: #aaa;
+}
+
+/* ── Tabla ── */
+.rep-tabla-wrap {
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 1100px) {
+  .rep-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .rep-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rep-tabla-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+
+.rep-tabla-titulo {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+}
+
+.rep-fecha {
+  font-size: 11px;
+  color: #aaa;
+  text-transform: capitalize;
+}
+
+.rep-empty {
+  padding: 24px;
+  text-align: center;
+  color: #aaa;
+  font-size: 13px;
+  margin: 0;
+}
+
+.rep-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.rep-table th {
+  background: #f8f9fa;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 500;
+  color: #888;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+
+.rep-table td {
+  padding: 9px 12px;
+  border-bottom: 0.5px solid #f5f5f5;
+  color: #444;
+  vertical-align: middle;
+}
+
+.rep-table tr:last-child td {
+  border-bottom: none;
+}
+
+.rep-table tr:hover td {
+  background: #fafafa;
+}
+
+.fila-devuelta td {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.td-productos {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.td-total {
+  font-weight: 500;
+  color: #1D9E75;
+}
+
+/* ── Badges de método ── */
+.metodo-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.metodo-efectivo      { background: #E1F5EE; color: #085041; }
+.metodo-tarjeta       { background: #E6F1FB; color: #0C447C; }
+.metodo-transferencia { background: #EEEDFE; color: #3C3489; }
+
+.badge-ok {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  background: #E1F5EE;
+  color: #085041;
+}
+
+.badge-devuelta {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  background: #FCEBEB;
+  color: #A32D2D;
+}
+
+.devuelta-tag {
+  color: #A32D2D;
+  font-size: 12px;
+}
+
+.btn-devolucion {
+  padding: 3px 10px;
+  border: 0.5px solid #ddd;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 11px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.12s;
+}
+
+.btn-devolucion:hover {
+  background: #FCEBEB;
+  color: #A32D2D;
+  border-color: #F09595;
+}
