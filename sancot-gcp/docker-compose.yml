@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+
+  # Base de datos MySQL
+  db:
+    image: mysql:8.0
+    container_name: sancot-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db/sancot.sql:/docker-entrypoint-initdb.d/sancot.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend Flask API
+  backend:
+    build:
+      context: ./src/sancont-api
+      dockerfile: ../../sancot-gcp/backend/Dockerfile
+    container_name: sancot-backend
+    restart: always
+    environment:
+      DB_HOST: db
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_PORT: 3306
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - "5000"
+
+  # Frontend React + Nginx
+  frontend:
+    build:
+      context: .
+      dockerfile: sancot-gcp/Dockerfile.frontend
+    container_name: sancot-frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
