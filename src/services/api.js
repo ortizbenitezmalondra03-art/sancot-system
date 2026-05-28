@@ -3,7 +3,11 @@
 //  Todas las llamadas a la API de Python en un solo lugar
 // ─────────────────────────────────────────────────────────
 
+//<<<<<<< HEAD
 const BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+//=======
+//const BASE = 'https://34.67.158.11'
+//>>>>>>> 5eab4228dd4b6f5385a2852f7a6b59ff3260cf3f
 
 const post = (url, body) =>
   fetch(`${BASE}${url}`, {
