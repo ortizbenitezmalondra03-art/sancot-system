@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './LoginPage.css'
 
-const API = 'https://sancot-api.onrender.com'
+const API = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+
 
 function LoginPage() {
   const [usuario,  setUsuario]  = useState('')

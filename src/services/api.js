@@ -3,7 +3,7 @@
 //  Todas las llamadas a la API de Python en un solo lugar
 // ─────────────────────────────────────────────────────────
 
-const BASE = 'https://sancot-api.onrender.com'
+const BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000'
 
 const post = (url, body) =>
   fetch(`${BASE}${url}`, {
